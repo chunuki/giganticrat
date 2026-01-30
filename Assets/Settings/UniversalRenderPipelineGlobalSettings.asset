@@ -62,15 +62,21 @@ MonoBehaviour:
       - rid: 2970602880260636678
       - rid: 2970602880260636679
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       - rid: 2969423147550900224
       - rid: 2969423147550900225
       - rid: 2969423147550900226
       - rid: 2969423147550900227
 =======
+=======
+>>>>>>> Stashed changes
       - rid: 885347235870539776
       - rid: 885347235870539777
       - rid: 885347235870539778
       - rid: 885347235870539779
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     m_RuntimeSettings:
       m_List: []
@@ -105,7 +111,11 @@ MonoBehaviour:
     version: 2
     RefIds:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     - rid: 2969423147550900224
+=======
+    - rid: 885347235870539776
+>>>>>>> Stashed changes
 =======
     - rid: 885347235870539776
 >>>>>>> Stashed changes
@@ -122,7 +132,11 @@ MonoBehaviour:
         m_RestructureBvh: {fileID: 7200000, guid: 56641cb88dcb31a4398a4997ef7a7a8c, type: 3}
         m_Scatter: {fileID: 7200000, guid: a2eaeefdac4637a44b734e85b7be9186, type: 3}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     - rid: 2969423147550900225
+=======
+    - rid: 885347235870539777
+>>>>>>> Stashed changes
 =======
     - rid: 885347235870539777
 >>>>>>> Stashed changes
@@ -131,7 +145,11 @@ MonoBehaviour:
         m_Version: 0
         m_UberPostShader: {fileID: 4800000, guid: fe4f13c1004a07d4ea1e30bfd0326d9e, type: 3}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     - rid: 2969423147550900226
+=======
+    - rid: 885347235870539778
+>>>>>>> Stashed changes
 =======
     - rid: 885347235870539778
 >>>>>>> Stashed changes
@@ -140,7 +158,11 @@ MonoBehaviour:
         version: 1
         useReflectionProbeRotation: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     - rid: 2969423147550900227
+=======
+    - rid: 885347235870539779
+>>>>>>> Stashed changes
 =======
     - rid: 885347235870539779
 >>>>>>> Stashed changes
