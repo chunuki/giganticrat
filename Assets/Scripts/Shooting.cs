@@ -1,16 +1,19 @@
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using StarterAssets;
 
 public class Shooting : MonoBehaviour
 {
 
     public InputAction attack;
     Animator animator;
+    private ThirdPersonController movementScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        movementScript = GetComponent<ThirdPersonController>(); 
         animator = GetComponent<Animator>();
         attack = InputSystem.actions.FindAction("Attack");
     }
@@ -18,14 +21,23 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (attack.WasPressedThisFrame()) 
+        bool isShooting = animator.GetBool("isShooting");
+        // if not currently shooting then shoot
+        if (!isShooting && attack.WasPressedThisFrame()) 
         { 
             animator.SetBool("isShooting", true);
+            if (movementScript != null) {
+                movementScript.MoveSpeed = 0f;
+                movementScript.SprintSpeed = 0f;
+            }
         }
-        else
-        {
-            animator.SetBool("isShooting", false);
-        }
-        
+    }
+
+    // animation event to make woman move again
+    public void ResetMovementSpeed()
+    {
+        animator.SetBool("isShooting", false);
+        movementScript.MoveSpeed = 2.0f;
+        movementScript.SprintSpeed = 5.335f;
     }
 }
