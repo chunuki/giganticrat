@@ -299,8 +299,16 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 5731dd471db14824e88733a9391284da, type: 2}
+    m_Motion: {fileID: -3100369314251171874, guid: 02601d758f832604c9ad731932428d63, type: 3}
     m_Threshold: 2
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: BoredAnimation
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 5731dd471db14824e88733a9391284da, type: 2}
+    m_Threshold: 3
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -309,7 +317,7 @@ BlendTree:
   m_BlendParameter: BoredAnimation
   m_BlendParameterY: Blend
   m_MinThreshold: 0
-  m_MaxThreshold: 2
+  m_MaxThreshold: 3
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 0
@@ -325,5 +333,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713f0a0f3b9306549ba8e6c9fa101403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  _timeUntilBored: 0
-  _numberOfBoredAnimations: 0
+  _timeUntilBored: 5
+  _numberOfBoredAnimations: 2
