@@ -1,9 +1,7 @@
 using UnityEngine;
 
-public class BulletTarget : MonoBehaviour
+public class HitBox : MonoBehaviour
 {
-    public Health health;
-    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,10 +12,5 @@ public class BulletTarget : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void GetHit(float damage)
-    {
-        health.TakeDamage(damage);
     }
 }
