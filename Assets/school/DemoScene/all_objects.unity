@@ -33261,6 +33261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc46e2e196896ab4fa2aab100bcee100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletTarget
+  health: {fileID: 0}
 --- !u!1001 &1388721390
 PrefabInstance:
   m_ObjectHideFlags: 0

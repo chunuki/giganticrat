@@ -22,6 +22,7 @@ public class Shooting : MonoBehaviour
     void Update()
     {
         bool isShooting = animator.GetBool("isShooting");
+
         // if not currently shooting then shoot
         if (!isShooting && attack.WasPressedThisFrame()) 
         { 
