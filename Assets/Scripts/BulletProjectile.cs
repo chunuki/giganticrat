@@ -11,6 +11,8 @@ public class BulletProjectile : MonoBehaviour
     [SerializeField] private float speed = 20f;
     public float damage = 20;
 
+    private bool hasHit = false;
+
     private Rigidbody bulletRigidbody;
     public BulletTarget bulletTarget;
     
@@ -27,11 +29,17 @@ public class BulletProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<BulletTarget>() != null)
+        if (hasHit) {
+            // do nothing
+            }
+        
+        else if (other.GetComponent<BulletTarget>() != null)
         {
             // Hit target
             Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
+            bulletTarget = other.GetComponent<BulletTarget>();
             bulletTarget.GetHit(damage);
+            hasHit = true;
         }
         else
         {

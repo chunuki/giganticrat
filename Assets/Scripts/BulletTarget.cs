@@ -19,5 +19,6 @@ public class BulletTarget : MonoBehaviour
     public void GetHit(float damage)
     {
         health.TakeDamage(damage);
+        Debug.Log("hit or miss huh");
     }
 }
