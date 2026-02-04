@@ -66,7 +66,7 @@ public class ThirdPersonShooterController : MonoBehaviour
             aimVirtualCamera.gameObject.SetActive(true);
             thirdPersonController.SetSensitivity(aimSensitivity);
             thirdPersonController.SetRotateOnMove(false);
-            animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 1f, Time.deltaTime * 13f));
+            animator.SetLayerWeight(2, Mathf.Lerp(animator.GetLayerWeight(2), 1f, Time.deltaTime * 13f));
 
             Vector3 worldAimTarget = mouseWorldPosition;
             worldAimTarget.y = transform.position.y;
@@ -80,7 +80,7 @@ public class ThirdPersonShooterController : MonoBehaviour
             aimVirtualCamera.gameObject.SetActive(false);
             thirdPersonController.SetSensitivity(normalSensitivity);
             thirdPersonController.SetRotateOnMove(true);
-            animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 0f, Time.deltaTime * 13f));
+            animator.SetLayerWeight(2, Mathf.Lerp(animator.GetLayerWeight(2), 0f, Time.deltaTime * 13f));
         }
 
         if (starterAssetsInputs.shoot)
@@ -88,11 +88,18 @@ public class ThirdPersonShooterController : MonoBehaviour
             Vector3 worldAimTarget = mouseWorldPosition;
             worldAimTarget.y = transform.position.y; // Keep rotation strictly horizontal
             Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
+
             transform.forward = aimDirection;
 
             Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
             Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
             starterAssetsInputs.shoot = false;
+
+            Invoke(nameof(ResetShootingBool), 0.1f);
         }
+    }
+    private void ResetShootingBool()
+    {
+        animator.SetBool("isShooting", false);
     }
 }

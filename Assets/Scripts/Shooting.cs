@@ -28,8 +28,8 @@ public class Shooting : MonoBehaviour
         { 
             animator.SetBool("isShooting", true);
             if (movementScript != null) {
-                movementScript.MoveSpeed = 0f;
-                movementScript.SprintSpeed = 0f;
+                // movementScript.MoveSpeed = 0f;
+                // movementScript.SprintSpeed = 0f;
             }
         }
     }
