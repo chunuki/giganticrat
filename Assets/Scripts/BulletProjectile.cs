@@ -8,6 +8,7 @@ public class BulletProjectile : MonoBehaviour
 
     [SerializeField] private Transform vfxHitGreen;
     [SerializeField] private Transform vfxHitRed;
+    [SerializeField] private float speed = 20f;
     public float damage = 20;
 
     private Rigidbody bulletRigidbody;
