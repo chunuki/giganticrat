@@ -14,8 +14,9 @@ public class Health : MonoBehaviour
 
         ragdoll = GetComponent<Ragdoll>();
         var rigidBodies = GetComponentsInChildren<Rigidbody>();
-        for each(var rigidBody in rigidBodies){
-            rigidbody.gameObject.AddComponent<BulletTarget>();
+        foreach(var rigidBody in rigidBodies)
+        {
+            GetComponent<Rigidbody>().gameObject.AddComponent<BulletTarget>();
         }
     }
 
@@ -32,8 +33,9 @@ public class Health : MonoBehaviour
         {
             Die();
         }
+     }
 
-    private void Die()
+    void Die()
     {
         animator.SetBool("IsDead", true);
     }
