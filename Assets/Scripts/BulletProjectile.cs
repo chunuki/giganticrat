@@ -8,9 +8,11 @@ public class BulletProjectile : MonoBehaviour
 
     [SerializeField] private Transform vfxHitGreen;
     [SerializeField] private Transform vfxHitRed;
-    [SerializeField] private float speed;
+    public float damage = 20;
 
     private Rigidbody bulletRigidbody;
+    public BulletTarget bulletTarget;
+    
 
     private void Awake()
     {
@@ -28,6 +30,7 @@ public class BulletProjectile : MonoBehaviour
         {
             // Hit target
             Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
+            bulletTarget.GetHit(damage);
         }
         else
         {
