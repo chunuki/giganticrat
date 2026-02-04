@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.4}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9104274583382145394}
@@ -207,5 +207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa3ac136f9187d64aa13cf7a17472f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletProjectile
-  vfxHitGreen: {fileID: 436926044008931993, guid: dbbf83b0e2a7a354aa2f72c0257676aa, type: 3}
+  vfxHitGreen: {fileID: 8776583896675247144, guid: e265cb67d36d9ac4e95e48e289d615e8, type: 3}
   vfxHitRed: {fileID: 8153028468530496940, guid: f40db358de8027b40a465c9b3026ce5d, type: 3}
+  speed: 10

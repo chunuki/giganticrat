@@ -8,6 +8,7 @@ public class BulletProjectile : MonoBehaviour
 
     [SerializeField] private Transform vfxHitGreen;
     [SerializeField] private Transform vfxHitRed;
+    [SerializeField] private float speed;
 
     private Rigidbody bulletRigidbody;
 
@@ -18,7 +19,6 @@ public class BulletProjectile : MonoBehaviour
 
     private void Start()
     {
-        float speed = 50f;
         bulletRigidbody.linearVelocity = transform.forward * speed;
     }
 
