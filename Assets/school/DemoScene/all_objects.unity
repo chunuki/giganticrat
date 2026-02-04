@@ -33019,7 +33019,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423607091}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -33384,8 +33384,6 @@ MonoBehaviour:
   debugTransform: {fileID: 1423607095}
   pfBulletProjectile: {fileID: 9104274583382145394, guid: a202376a0d44b304e993845d3cb3868b, type: 3}
   spawnBulletPosition: {fileID: 1814531569}
-  vfxHitGreen: {fileID: 0}
-  vfxHitRed: {fileID: 0}
 --- !u!1001 &1437501663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43541,7 +43539,7 @@ Transform:
   m_GameObject: {fileID: 1814531568}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.093, y: 1.376, z: 0.7}
+  m_LocalPosition: {x: 0.093, y: 1.376, z: 0.997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

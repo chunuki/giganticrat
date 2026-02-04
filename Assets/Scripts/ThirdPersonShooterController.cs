@@ -13,8 +13,6 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private Transform debugTransform;
     [SerializeField] private Transform pfBulletProjectile;
     [SerializeField] private Transform spawnBulletPosition;
-    [SerializeField] private Transform vfxHitGreen;
-    [SerializeField] private Transform vfxHitRed;
 
     private bool aimToggle;
     private ThirdPersonController thirdPersonController;
