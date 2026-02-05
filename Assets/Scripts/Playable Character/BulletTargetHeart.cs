@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Collections;
 
 public class BulletTargetHeart : MonoBehaviour
 {
@@ -10,10 +11,18 @@ public class BulletTargetHeart : MonoBehaviour
     {
         if (!hotGuy.isDead && !hotGuy.isInLove)
         {
-            hotGuy.isInLove = true;
             OnManInLove?.Invoke();
-            hotGuy.animator.SetTrigger("IsInLove");
+            StartCoroutine(ShotAnimation());
             Debug.Log("He is in Love!");
         }
+    }
+
+    private IEnumerator ShotAnimation()
+    {
+        hotGuy.animator.SetTrigger("IsInLove");
+        yield return null;
+        yield return new WaitUntil(() => hotGuy.animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1 && !hotGuy.animator.IsInTransition(0));
+        hotGuy.isInLove = true;
+
     }
 }
