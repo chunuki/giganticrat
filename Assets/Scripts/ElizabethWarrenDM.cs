@@ -5,6 +5,10 @@ public class ElizabethWarrenDM : MonoBehaviour
 {
     private DialogueManager dialogueManager;
     [SerializeField] private DialogueData dialogueData2;
+    [Header("Config")]
+    [SerializeField] private QuestInfoSO questInfo;
+
+    private string questId;
 
     private void Awake()
     {
@@ -12,6 +16,7 @@ public class ElizabethWarrenDM : MonoBehaviour
         {
             dialogueManager = GetComponent<DialogueManager>();
         }
+        questId = questInfo.id;
     }
 
     private void OnEnable()
@@ -22,10 +27,11 @@ public class ElizabethWarrenDM : MonoBehaviour
     private void SwitchToDialogue2()
     {
         dialogueManager.currentDialogueData = dialogueData2;
+        GameEventsManager.instance.questEvents.FinishQuest(questId);
     }
 
     private void OnDisable()
     {
-        //Love1QuestStep.onMenCollectedChanged -= SwitchToDialogue2;
+        Love1QuestStep.onMenCollectedChanged -= SwitchToDialogue2;
     }
 }
