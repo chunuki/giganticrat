@@ -15,7 +15,7 @@ public class GoalTextChanger : MonoBehaviour
     private void OnDisable()
     {
         GameEventsManager.instance.questEvents.onStartQuest -= AddToGoals;
-        GameEventsManager.instance.questEvents.onDisabled += RemoveFromGoals;
+        GameEventsManager.instance.questEvents.onDisabled -= RemoveFromGoals;
     }
 
     private void AddToGoals(string id)
@@ -30,6 +30,7 @@ public class GoalTextChanger : MonoBehaviour
     private void RemoveFromGoals(string id)
     {
         Quest quest = QuestManager.instance.GetQuestById(id);
+        Debug.Log("Removing goal: " + quest.info.displayName);
         if (quest != null)
         {
             goalsText.text = goalsText.text.Replace($"\n- {quest.info.displayName}", "");
