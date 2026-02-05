@@ -902,8 +902,8 @@ Transform:
   m_GameObject: {fileID: 48422231}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5102205, y: -0.5, z: 20.11115}
-  m_LocalScale: {x: 61.09122, y: 9.9479065, z: 1}
+  m_LocalPosition: {x: -0.5102205, y: 3.8999996, z: 20.111}
+  m_LocalScale: {x: 61.09122, y: 17.485435, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 940964423}
@@ -7904,8 +7904,8 @@ Transform:
   m_GameObject: {fileID: 341344400}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -30.67502, y: -0.5, z: -12.40905}
-  m_LocalScale: {x: 67.62749, y: 9.9479065, z: 1}
+  m_LocalPosition: {x: -30.67502, y: 3.8999996, z: -12.40905}
+  m_LocalScale: {x: 67.62749, y: 17.485435, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 940964423}
@@ -48645,8 +48645,8 @@ Transform:
   m_GameObject: {fileID: 1856821931}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 28.924978, y: -0.5, z: -12.40905}
-  m_LocalScale: {x: 67.62749, y: 9.9479065, z: 1}
+  m_LocalPosition: {x: 28.924978, y: 3.8999996, z: -12.40905}
+  m_LocalScale: {x: 67.62749, y: 17.485435, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 940964423}
@@ -50060,8 +50060,8 @@ Transform:
   m_GameObject: {fileID: 1951772869}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5102205, y: -0.5, z: -44.83885}
-  m_LocalScale: {x: 61.09122, y: 9.9479065, z: 1}
+  m_LocalPosition: {x: -0.5102205, y: 3.9, z: -44.83885}
+  m_LocalScale: {x: 61.09122, y: 17.485435, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 940964423}
@@ -53966,7 +53966,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   triggerState: 1
-  currentDialogueData: {fileID: 0}
+  currentDialogueData: {fileID: 11400000, guid: c5b2dac676ff70742a096bceba63bbe2, type: 2}
 --- !u!114 &2006973445
 MonoBehaviour:
   m_ObjectHideFlags: 0
