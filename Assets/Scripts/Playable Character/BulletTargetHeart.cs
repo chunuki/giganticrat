@@ -1,26 +1,17 @@
 using UnityEngine;
+using System;
 
 public class BulletTargetHeart : MonoBehaviour
 {
     public HotGuy hotGuy;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public static event Action OnManInLove; // growtopia superbroadcast type shi
 
     public void GetShot()
     {
-        if (!hotGuy.isDead)
+        if (!hotGuy.isDead && !hotGuy.isInLove)
         {
             hotGuy.isInLove = true;
+            OnManInLove?.Invoke();
         }
     }
 }

@@ -15,5 +15,6 @@ MonoBehaviour:
   <id>k__BackingField: Love1Quest
   displayName: Make someone fall in love!
   questPrequisites: []
-  questStepPrefabs: []
+  questStepPrefabs:
+  - {fileID: 1362379364856120340, guid: 6e4892ec588023c4f9cbf43f36ce417e, type: 3}
   scoreReward: 100
