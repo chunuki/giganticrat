@@ -56357,6 +56357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
   currentHealth: 0
+  animator: {fileID: 2120952098}
 --- !u!114 &2120952106
 MonoBehaviour:
   m_ObjectHideFlags: 0
