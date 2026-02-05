@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc236b69c724704ba9dd1fb6c507016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Love1QuestStep
+  dialogueManager: {fileID: 0}
+  questDialogue: {fileID: 11400000, guid: d3abbd4642cdd1049b3ffe5afa70ccfd, type: 2}
 --- !u!114 &8691892363174280763
 MonoBehaviour:
   m_ObjectHideFlags: 0
