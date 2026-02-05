@@ -13,17 +13,18 @@ public class HotGuy : MonoBehaviour
 
     [Header("Scripts")]
     public RandomMovement randomMovement;
+    public Boid boid;
 
     [Header("Layers")]
     public LayerMask deathLayerMask;
     public LayerMask playerLayerMask;
+    public LayerMask hotGuyLayerMask;
 
     [Header("Neutral Settings")]
     public float range = 10f; //radius of sphere
     public float waitTime = 3f;
 
     [Header("In Love Settings")]
-    public float stoppingDistance = 1.0f;
 
     [Header("Angry Settings")]
     public float visionRange = 10f;
@@ -39,6 +40,8 @@ public class HotGuy : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        boid = GetComponent<Boid>();
+        randomMovement = GetComponent<RandomMovement>();
     }
 
     // Update is called once per frame
@@ -51,7 +54,8 @@ public class HotGuy : MonoBehaviour
 
         else if (isInLove)
         {
-            Follow();
+            Debug.Log("I am in Love!");
+            boid.Follow();
         }
 
         animator.SetBool("IsMoving", agent.velocity.magnitude > 0.01f);
@@ -77,19 +81,5 @@ public class HotGuy : MonoBehaviour
 
     // functions for Following
     // routine for Follow
-    private void Follow()
-    {
-        if (playerTransform != null)
-        {
-            agent.SetDestination(playerTransform.position);
 
-            if (agent.remainingDistance <= stoppingDistance)
-            {
-                agent.isStopped = true;
-            }
-            else agent.isStopped = false;
-        }
-
-    }
-    
 }
