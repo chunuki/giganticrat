@@ -27,7 +27,6 @@ public class ElizabethWarrenDM : MonoBehaviour
     private void SwitchToDialogue2()
     {
         dialogueManager.currentDialogueData = dialogueData2;
-        GameEventsManager.instance.questEvents.FinishQuest(questId);
     }
 
     private void OnDisable()
