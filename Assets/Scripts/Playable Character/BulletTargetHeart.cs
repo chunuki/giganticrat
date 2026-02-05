@@ -12,6 +12,8 @@ public class BulletTargetHeart : MonoBehaviour
         {
             hotGuy.isInLove = true;
             OnManInLove?.Invoke();
+            hotGuy.animator.SetTrigger("IsInLove");
+            Debug.Log("He is in Love!");
         }
     }
 }

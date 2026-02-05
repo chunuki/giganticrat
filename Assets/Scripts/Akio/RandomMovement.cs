@@ -79,14 +79,16 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
 
         animator.SetBool("IsWaiting", false); // to handle Animator
 
+
         Vector3 point;
         if (RandomPoint(centrePoint.position, range, out point)) //pass in our centre point and radius of area
         {
             Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); //so you can see with gizmos
             agent.SetDestination(point);
+            Debug.Log("Finding Point...");
         }
-
     }
+
 
     public void OnFootstep()
     {

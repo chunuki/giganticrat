@@ -8,6 +8,7 @@ public class BulletProjectile : MonoBehaviour
 
     [SerializeField] private Transform vfxHitGreen;
     [SerializeField] private Transform vfxHitRed;
+    [SerializeField] private Transform vfxHitPink;
     [SerializeField] private float speed = 20f;
     [SerializeField] private  float damage = 20;
 
@@ -46,7 +47,7 @@ public class BulletProjectile : MonoBehaviour
         else if (other.GetComponent<BulletTargetHeart>() != null)
         {
             // Hit target
-            Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
+            Instantiate(vfxHitPink, transform.position, Quaternion.identity);
             bulletTargetHeart = other.GetComponent<BulletTargetHeart>();
             bulletTargetHeart.GetShot();
             hasHit = true;
