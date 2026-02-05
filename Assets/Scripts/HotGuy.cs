@@ -23,6 +23,9 @@ public class HotGuy : MonoBehaviour
     public float range = 10f; //radius of sphere
     public float waitTime = 3f;
 
+    [Header("In Love Settings")]
+    public float stoppingDistance = 1.0f;
+
     [Header("Angry Settings")]
     public float visionRange = 10f;
 
@@ -136,6 +139,12 @@ public class HotGuy : MonoBehaviour
         if (playerTransform != null)
         {
             agent.SetDestination(playerTransform.position);
+
+            if (agent.remainingDistance <= stoppingDistance)
+            {
+                agent.isStopped = true;
+            }
+            else agent.isStopped = false;
         }
 
     }

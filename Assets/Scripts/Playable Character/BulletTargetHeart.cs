@@ -1,24 +1,23 @@
 using UnityEngine;
 
-public class BulletTarget : MonoBehaviour
+public class BulletTargetHeart : MonoBehaviour
 {
-    public Health health;
-    
+    public HotGuy hotGuy;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void GetHit(float damage)
+    public void GetShot()
     {
-        health.TakeDamage(damage);
-        Debug.Log("Body Part Hit:" + gameObject.name);
+        hotGuy.isInLove = true;
     }
 }

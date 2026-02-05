@@ -15,7 +15,8 @@ public class BulletProjectile : MonoBehaviour
 
     private Rigidbody bulletRigidbody;
     public BulletTarget bulletTarget;
-    
+    public BulletTargetHeart bulletTargetHeart;
+
 
     private void Awake()
     {
@@ -41,6 +42,16 @@ public class BulletProjectile : MonoBehaviour
             bulletTarget.GetHit(damage);
             hasHit = true;
         }
+
+        else if (other.GetComponent<BulletTargetHeart>() != null)
+        {
+            // Hit target
+            Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
+            bulletTargetHeart = other.GetComponent<BulletTargetHeart>();
+            bulletTargetHeart.GetShot();
+            hasHit = true;
+        }
+
         else
         {
             // Hit something else
