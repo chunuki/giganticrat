@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        if ((currentHealth =< 0.0f) && (akio.currentState != AkioState.InLove))
+        if ((currentHealth <= 0.0f) && (akio.currentState != AkioState.InLove))
         {
             Die();
         }
