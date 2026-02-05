@@ -1,17 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI; //important
 
 public class HotGuy : MonoBehaviour
 {
 
     [Header("References")]
-    public NavMeshAgent agent;
+    public UnityEngine.AI.NavMeshAgent agent;
     public Transform playerTransform;
     public Transform centrePoint; //centre of the area the agent wants to move around in
     public Animator animator;
 
+    [Header("Scripts")]
+    public RandomMovement randomMovement;
+
     [Header("Layers")]
-    public private LayerMask deathLayerMask;
-    public private LayerMask playerLayerMask;
+    public LayerMask deathLayerMask;
+    public LayerMask playerLayerMask;
 
     [Header("Neutral Settings")]
     public float range = 10f; //radius of sphere
@@ -22,17 +28,30 @@ public class HotGuy : MonoBehaviour
 
     private bool isDeathVisible;
     private bool isPlayerVisible;
+    public bool isInLove = false;
+    public bool isWaiting = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (!isDeathVisible && !isInLove)
+        {
+            randomMovement.Move();
+        }
+
+        else if (isInLove)
+        {
+            Follow();
+        }
+
+        animator.SetBool("IsMoving", agent.velocity.magnitude > 0.01f);
     }
 
 
@@ -42,8 +61,8 @@ public class HotGuy : MonoBehaviour
     {
 
         Vector3 randomPoint = center + Random.insideUnitSphere * range; //random point in a sphere 
-        NavMeshHit hit;
-        if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas)) //documentation: https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html
+        UnityEngine.AI.NavMeshHit hit;
+        if (UnityEngine.AI.NavMesh.SamplePosition(randomPoint, out hit, 1.0f, UnityEngine.AI.NavMesh.AllAreas)) //documentation: https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html
         {
             //the 1.0f is the max distance from the random point to a point on the navmesh, might want to increase if range is big
             //or add a for loop like in the documentation
@@ -110,5 +129,15 @@ public class HotGuy : MonoBehaviour
         isDeathVisible = Physics.CheckSphere(transform.position, visionRange, playerLayerMask);
     }
 
+    // functions for Following
+    // routine for Follow
+    private void Follow()
+    {
+        if (playerTransform != null)
+        {
+            agent.SetDestination(playerTransform.position);
+        }
+
+    }
     
 }
