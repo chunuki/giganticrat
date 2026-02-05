@@ -16,7 +16,7 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
     public float range = 10f; //radius of sphere
     public float waitTime = 3f;
 
-    bool isWaiting = false;
+    public bool isWaiting = false;
 
 
     void Start()
@@ -26,14 +26,12 @@ public class RandomMovement : MonoBehaviour //don't forget to change the script 
     }
 
 
-    void Update()
+    public void Move()
     {
         if (!isWaiting && ReachedDestination())
         {
             StartCoroutine(Patrol());
         }
-
-        animator.SetBool("IsMoving", agent.velocity.magnitude > 0.01f);
 
     }
 
