@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        akio = GetComponent<Akio>();
     }
 
     // Update is called once per frame
@@ -30,6 +31,7 @@ public class Health : MonoBehaviour
 
     void Die()
     {
+        akio.agent.isStopped = true;
         animator.SetBool("IsDead", true);
         akio.UpdateState(AkioState.Dead);
     }

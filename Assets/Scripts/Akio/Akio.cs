@@ -70,6 +70,7 @@ public class Akio : MonoBehaviour
                 boid.Follow();
                 break;
             case AkioState.Dead:
+                agent.isStopped = true;
                 break;
         }
 
@@ -109,7 +110,7 @@ public class Akio : MonoBehaviour
         switch (newState)
         {
             case AkioState.InLove:
-                SetLayerRecursively(gameObject, LayerMask.NameToLayer("Hot Guy"));
+                SetLayerRecursively(gameObject, 8);
                 heartFx.SetActive(true);
                 break;
         }
