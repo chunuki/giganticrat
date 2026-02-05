@@ -102,12 +102,12 @@ public class HotGuy : MonoBehaviour
 
     private void DetectDeath()
     {
-        isDeathVisible = Physics.CheckSphere(transform.position, visionRange, deathLayerMask)
+        isDeathVisible = Physics.CheckSphere(transform.position, visionRange, deathLayerMask);
     }
 
     private void DetectPlayer()
     {
-        isDeathVisible = Physics.CheckSphere(transform.position, visionRange, playerLayerMask)
+        isDeathVisible = Physics.CheckSphere(transform.position, visionRange, playerLayerMask);
     }
 
     

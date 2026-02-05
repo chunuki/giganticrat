@@ -26,4 +26,7 @@ public class AkioStateMachine
     }
 
     public void Update()
+    {
+        // do nothing
+    }
 }
