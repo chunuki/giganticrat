@@ -5,6 +5,7 @@ public class Health : MonoBehaviour
     public float maxHealth;
     public float currentHealth;
     public Animator animator;
+    public Akio akio;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,7 +22,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        if (currentHealth < 0.0f)
+        if ((currentHealth =< 0.0f) && (akio.currentState != AkioState.InLove))
         {
             Die();
         }
@@ -30,5 +31,6 @@ public class Health : MonoBehaviour
     void Die()
     {
         animator.SetBool("IsDead", true);
+        akio.UpdateState(AkioState.Dead);
     }
 }

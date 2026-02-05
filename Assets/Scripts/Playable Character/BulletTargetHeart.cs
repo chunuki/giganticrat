@@ -4,12 +4,12 @@ using System.Collections;
 
 public class BulletTargetHeart : MonoBehaviour
 {
-    public HotGuy hotGuy;
+    public Akio akio;
     public static event Action OnManInLove; // growtopia superbroadcast type shi
 
     public void GetShot()
     {
-        if (!hotGuy.isDead && !hotGuy.isInLove)
+        if (akio.currentState != AkioState.Dead && akio.currentState != AkioState.InLove)
         {
             OnManInLove?.Invoke();
             StartCoroutine(ShotAnimation());
@@ -19,10 +19,11 @@ public class BulletTargetHeart : MonoBehaviour
 
     private IEnumerator ShotAnimation()
     {
-        hotGuy.animator.SetTrigger("IsInLove");
+        akio.agent.isStopped = true;
+        akio.animator.SetTrigger("IsInLove");
         yield return null;
-        yield return new WaitUntil(() => hotGuy.animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1 && !hotGuy.animator.IsInTransition(0));
-        hotGuy.isInLove = true;
+        yield return new WaitForSeconds(2.0f);
+        akio.UpdateState(AkioState.InLove);
 
     }
 }
