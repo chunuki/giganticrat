@@ -9,13 +9,13 @@ public class GoalTextChanger : MonoBehaviour
     private void OnEnable()
     {
         GameEventsManager.instance.questEvents.onStartQuest += AddToGoals;
-        GameEventsManager.instance.questEvents.onDisabled += RemoveFromGoals;
+        GameEventsManager.instance.questEvents.onFinishQuest += RemoveFromGoals;
     }
 
     private void OnDisable()
     {
         GameEventsManager.instance.questEvents.onStartQuest -= AddToGoals;
-        GameEventsManager.instance.questEvents.onDisabled -= RemoveFromGoals;
+        GameEventsManager.instance.questEvents.onFinishQuest -= RemoveFromGoals;
     }
 
     private void AddToGoals(string id)
