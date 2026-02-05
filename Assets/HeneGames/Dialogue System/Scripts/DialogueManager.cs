@@ -29,7 +29,7 @@ namespace HeneGames.DialogueSystem
 
         [Header("Dialogue")]
         [SerializeField] private TriggerState triggerState;
-        [SerializeField] private List<NPC_Centence> sentences = new List<NPC_Centence>();
+        public DialogueData currentDialogueData;
 
         private void Update()
         {
@@ -168,9 +168,9 @@ namespace HeneGames.DialogueSystem
 
             ShowCurrentSentence();
 
-            PlaySound(sentences[currentSentence].sentenceSound);
+            PlaySound(currentDialogueData.sentences[currentSentence].sentenceSound);
 
-            coolDownTimer = sentences[currentSentence].skipDelayTime;
+            coolDownTimer = currentDialogueData.sentences[currentSentence].skipDelayTime;
         }
 
         public void NextSentence(out bool lastSentence)
@@ -190,7 +190,7 @@ namespace HeneGames.DialogueSystem
 
             nextSentenceDialogueEvent.Invoke();
 
-            if (currentSentence > sentences.Count - 1)
+            if (currentSentence > currentDialogueData.sentences.Count - 1)
             {
                 StopDialogue();
 
@@ -203,11 +203,11 @@ namespace HeneGames.DialogueSystem
 
             lastSentence = false;
 
-            PlaySound(sentences[currentSentence].sentenceSound);
+            PlaySound(currentDialogueData.sentences[currentSentence].sentenceSound);
 
             ShowCurrentSentence();
 
-            coolDownTimer = sentences[currentSentence].skipDelayTime;
+            coolDownTimer = currentDialogueData.sentences[currentSentence].skipDelayTime;
         }
 
         public void StopDialogue()
@@ -240,30 +240,38 @@ namespace HeneGames.DialogueSystem
 
         private void ShowCurrentSentence()
         {
-            if (sentences[currentSentence].dialogueCharacter != null)
+            if (currentDialogueData.sentences[currentSentence].dialogueCharacter != null)
             {
-                DialogueUI.instance.ShowSentence(sentences[currentSentence].dialogueCharacter, sentences[currentSentence].sentence);
+                DialogueUI.instance.ShowSentence(currentDialogueData.sentences[currentSentence].dialogueCharacter, currentDialogueData.sentences[currentSentence].sentence);
 
-                sentences[currentSentence].sentenceEvent.Invoke();
+                currentDialogueData.sentences[currentSentence].sentenceEvent.Invoke();
             }
             else
             {
-                DialogueCharacter _dialogueCharacter = new DialogueCharacter();
+                DialogueCharacter _dialogueCharacter = ScriptableObject.CreateInstance<DialogueCharacter>();
                 _dialogueCharacter.characterName = "";
                 _dialogueCharacter.characterPhoto = null;
 
-                DialogueUI.instance.ShowSentence(_dialogueCharacter, sentences[currentSentence].sentence);
+                DialogueUI.instance.ShowSentence(_dialogueCharacter, currentDialogueData.sentences[currentSentence].sentence);
 
-                sentences[currentSentence].sentenceEvent.Invoke();
+                currentDialogueData.sentences[currentSentence].sentenceEvent.Invoke();
             }
         }
 
         public int CurrentSentenceLenght()
         {
-            if (sentences.Count <= 0)
+            if (currentDialogueData.sentences.Count <= 0)
                 return 0;
 
-            return sentences[currentSentence].sentence.Length;
+            return currentDialogueData.sentences[currentSentence].sentence.Length;
+        }
+        public void SetDialogueData(DialogueData newData)
+        {
+            if (dialogueIsOn)
+            {
+                StopDialogue(); 
+            }
+            currentDialogueData = newData;
         }
     }
 

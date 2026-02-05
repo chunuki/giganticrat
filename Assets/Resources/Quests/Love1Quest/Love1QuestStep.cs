@@ -1,3 +1,5 @@
+using HeneGames.DialogueSystem;
+using System;
 using UnityEngine;
 
 public class Love1QuestStep : QuestStep
@@ -13,6 +15,8 @@ public class Love1QuestStep : QuestStep
     {
         BulletTargetHeart.OnManInLove -= ManCollected; // -= means unsubscribe
     }
+    
+    public static event Action onMenCollectedChanged;
     private void ManCollected()
     {         
         if (menCollected < menRequired)
@@ -21,6 +25,7 @@ public class Love1QuestStep : QuestStep
         }
         if (menCollected >= menRequired)
         {
+            onMenCollectedChanged?.Invoke();
             FinishQuestStep();
         }
     }
