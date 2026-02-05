@@ -18,6 +18,9 @@ public class BulletTargetHeart : MonoBehaviour
 
     public void GetShot()
     {
-        hotGuy.isInLove = true;
+        if (!hotGuy.isDead)
+        {
+            hotGuy.isInLove = true;
+        }
     }
 }

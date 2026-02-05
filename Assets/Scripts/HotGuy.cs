@@ -31,6 +31,7 @@ public class HotGuy : MonoBehaviour
 
     private bool isDeathVisible;
     private bool isPlayerVisible;
+    public bool isDead = false;
     public bool isInLove = false;
     public bool isWaiting = false;
 
