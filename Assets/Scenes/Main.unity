@@ -57623,6 +57623,7 @@ MonoBehaviour:
   waitTime: 3
   stoppingDistance: 1.5
   visionRange: 10
+  isDead: 0
   isInLove: 0
   isWaiting: 1
 --- !u!1001 &2124877566
