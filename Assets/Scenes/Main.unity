@@ -19034,50 +19034,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 45565251077e14d4180ee5c2bb5b896d, type: 3}
   m_PrefabInstance: {fileID: 673774876}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &674838779
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 674838781}
-  - component: {fileID: 674838780}
-  m_Layer: 0
-  m_Name: QuestManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &674838780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674838779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 077b95c15900306439a81a03392e20b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::QuestManager
---- !u!4 &674838781
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674838779}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.79453, y: 0.0594, z: -1.69419}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &679734733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20343,6 +20299,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4558593196022300, guid: 991e8973513e2ad408232c1afeb3a9df, type: 3}
   m_PrefabInstance: {fileID: 739497571}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &747261581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 747261583}
+  - component: {fileID: 747261582}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &747261582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747261581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 077b95c15900306439a81a03392e20b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuestManager
+--- !u!4 &747261583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747261581}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.26009, y: 0.11949, z: 3.07471}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &748126321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56295,14 +56295,26 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   startDialogueEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8691892363174280763, guid: 6e4892ec588023c4f9cbf43f36ce417e, type: 3}
+        m_TargetAssemblyTypeName: QuestTriggerBridge, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   nextSentenceDialogueEvent:
     m_PersistentCalls:
       m_Calls: []
   endDialogueEvent:
     m_PersistentCalls:
       m_Calls: []
-  triggerState: 0
+  triggerState: 1
   sentences:
   - dialogueCharacter: {fileID: 11400000, guid: 3914ababc25e8124b895ea9a87a2a7fc, type: 2}
     sentence: My precious daughter...
@@ -56320,7 +56332,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 8691892363174280763, guid: 6e4892ec588023c4f9cbf43f36ce417e, type: 3}
           m_TargetAssemblyTypeName: QuestTriggerBridge, Assembly-CSharp
-          m_MethodName: TriggerStartQuest
+          m_MethodName: Interact
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -58869,7 +58881,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HotGuy
   agent: {fileID: 2120952103}
   playerTransform: {fileID: 1437086557}
-  centrePoint: {fileID: 549606842}
   animator: {fileID: 2120952098}
   randomMovement: {fileID: 2120952102}
   deathLayerMask:
@@ -63646,5 +63657,5 @@ SceneRoots:
   - {fileID: 1758803347}
   - {fileID: 1424226800}
   - {fileID: 2129989090}
-  - {fileID: 674838781}
   - {fileID: 848231623}
+  - {fileID: 747261583}

@@ -8,8 +8,15 @@ public class ScoreManager : MonoBehaviour
     private TMP_Text scoreText;
     [SerializeField]
     private int score = 0;
+    private void OnEnable()
+    {
+        GameEventsManager.instance.scoreEvents.onScoreGained += Score;
+    }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void OnDisable()
+    {
+        GameEventsManager.instance.scoreEvents.onScoreGained -= Score;
+    }
     private void Score(int points)
     {
         score += points;

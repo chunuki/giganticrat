@@ -3,10 +3,16 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
+    public static QuestManager instance { get; private set; }
     private Dictionary<string, Quest> questMap;
 
     private void Awake()
     {
+        if (instance != null)
+        {
+            Debug.LogError("Found more than one Quest Manager in the scene.");
+        }
+        instance = this;
         questMap = CreateQuestMap();
     }
 
@@ -35,6 +41,15 @@ public class QuestManager : MonoBehaviour
                 ChangeQuestState(quest.info.id, QuestState.CAN_START);
             }
         }
+    }
+
+    public QuestState GetQuestState(string id)
+    {
+        if (questMap.ContainsKey(id))
+        {
+            return questMap[id].state;
+        }
+        return QuestState.REQUIREMENTS_NOT_MET;
     }
 
     private void ChangeQuestState(string id, QuestState state)
@@ -73,22 +88,40 @@ public class QuestManager : MonoBehaviour
     {
         Debug.Log("quest started");
         Quest quest = GetQuestById(id);
-        quest.InstantiateCurrentQuestStep(this.transform);
-        ChangeQuestState(quest.info.id, QuestState.IN_PROGRESS);
+        if (quest.state == QuestState.CAN_START)
+        {
+            quest.InstantiateCurrentQuestStep(this.transform);
+            ChangeQuestState(quest.info.id, QuestState.IN_PROGRESS);
+        }
+            
     }
 
     private void AdvanceQuest(string id)
     {
-        //Quest quest = GetQuestById(id);
-        //quest.AdvanceQuest();
-        //GameEventsManager.instance.questEvents.QuestStateChange(quest);
+        Debug.Log("quest advanced");
+        Quest quest = GetQuestById(id);
+        quest.MoveToNextStep();
+        if (quest.CurrentStepExists())
+        {
+            quest.InstantiateCurrentQuestStep(this.transform);
+        }
+        else
+        {             
+            ChangeQuestState(quest.info.id, QuestState.CAN_COMPLETE);
+        }
+        GameEventsManager.instance.questEvents.QuestStateChange(quest);
     }
 
     private void FinishQuest(string id)
     {
-        //Quest quest = GetQuestById(id);
-        //quest.FinishQuest();
-        //GameEventsManager.instance.questEvents.QuestStateChange(quest);
+        Quest quest = GetQuestById(id);
+        ClaimRewards(quest);
+        ChangeQuestState(quest.info.id, QuestState.COMPLETED);
+    }
+
+    private void ClaimRewards(Quest quest)
+    {
+        GameEventsManager.instance.scoreEvents.ScoreGained(quest.info.scoreReward);
     }
 
     private Dictionary<string, Quest> CreateQuestMap()
@@ -108,12 +141,12 @@ public class QuestManager : MonoBehaviour
         return idToQuestMap;
     }
 
-    private Quest GetQuestById(string id)
+    public Quest GetQuestById(string id)
     {
         Quest quest = questMap[id];
         if (quest == null)
         {
-            Debug.LogError($"Quest with id {id} not found.");
+            Debug.LogError("quest id not found");
         }
         return quest;
     }

@@ -7,7 +7,6 @@ public class Love1QuestStep : QuestStep
 
     private void OnEnable()
     {
-        Debug.Log("love quest complete");
         BulletTargetHeart.OnManInLove += ManCollected; // += means subscribe
     }
     private void OnDisable()
