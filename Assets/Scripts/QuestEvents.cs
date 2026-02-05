@@ -3,6 +3,12 @@ using System;
 
 public class QuestEvents
 {
+    public event Action<string> onDisabled;
+    public void OnDisable(string id)
+    {
+        onDisabled?.Invoke(id);
+    }
+
     public event Action<string> onStartQuest;
     public void StartQuest(string id)
     {

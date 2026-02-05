@@ -11,6 +11,7 @@ public class Love1QuestStep : QuestStep
     {
         BulletTargetHeart.OnManInLove += ManCollected; // += means subscribe
     }
+
     private void OnDisable()
     {
         BulletTargetHeart.OnManInLove -= ManCollected; // -= means unsubscribe

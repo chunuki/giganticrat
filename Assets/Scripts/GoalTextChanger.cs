@@ -5,15 +5,17 @@ using System.Collections.Generic;
 
 public class GoalTextChanger : MonoBehaviour
 {
-    public TMP_Text goalstext;
+    public TMP_Text goalsText;
     private void OnEnable()
     {
         GameEventsManager.instance.questEvents.onStartQuest += AddToGoals;
-        GameEventsManager.instance.questEvents.onFinishQuest += RemoveFromGoals;
+        GameEventsManager.instance.questEvents.onDisabled += RemoveFromGoals;
     }
 
     private void OnDisable()
     {
+        GameEventsManager.instance.questEvents.onStartQuest -= AddToGoals;
+        GameEventsManager.instance.questEvents.onDisabled += RemoveFromGoals;
     }
 
     private void AddToGoals(string id)
@@ -21,7 +23,6 @@ public class GoalTextChanger : MonoBehaviour
         Quest quest = QuestManager.instance.GetQuestById(id);
         if (quest != null)
         {
-            TextMeshProUGUI goalsText = GetComponent<TextMeshProUGUI>();
             goalsText.text += $"\n- {quest.info.displayName}";
         }
     }
@@ -31,7 +32,6 @@ public class GoalTextChanger : MonoBehaviour
         Quest quest = QuestManager.instance.GetQuestById(id);
         if (quest != null)
         {
-            TextMeshProUGUI goalsText = GetComponent<TextMeshProUGUI>();
             goalsText.text = goalsText.text.Replace($"\n- {quest.info.displayName}", "");
         }
     }

@@ -40423,6 +40423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b7fdde55d3d80499cb80d2f154797e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GoalTextChanger
+  goalsText: {fileID: 1524943265}
 --- !u!1001 &1643772768
 PrefabInstance:
   m_ObjectHideFlags: 0
