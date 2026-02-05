@@ -1,6 +1,6 @@
 ﻿<Solution>
-  <Project Path="MToon.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="MToon.csproj" />
   <Project Path="VRMShaders.VRM10.MToon10.Runtime.csproj" />
   <Project Path="VRMShaders.GLTF.UniUnlit.Runtime.csproj" />
   <Project Path="VRMShaders.GLTF.IO.Editor.csproj" />

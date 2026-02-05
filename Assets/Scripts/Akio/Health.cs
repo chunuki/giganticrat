@@ -4,7 +4,7 @@ public class Health : MonoBehaviour
 {
     public float maxHealth;
     public float currentHealth;
-    Animator animator;
+    public Animator animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
