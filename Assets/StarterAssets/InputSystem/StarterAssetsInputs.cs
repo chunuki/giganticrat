@@ -15,6 +15,7 @@ namespace StarterAssets
 		public bool aim;
 		public bool aimToggle;
 		public bool shoot;
+		public bool scan;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -36,7 +37,6 @@ namespace StarterAssets
 				LookInput(value.Get<Vector2>());
 			}
 		}
-
 		public void OnJump(InputValue value)
 		{
 			JumpInput(value.isPressed);
@@ -60,6 +60,11 @@ namespace StarterAssets
         public void OnShoot(InputValue value)
         {
             ShootInput(value.isPressed);
+        }
+
+        public void OnScan(InputValue value)
+        {
+            ScanInput(value.isPressed);
         }
 #endif
 
@@ -98,6 +103,11 @@ namespace StarterAssets
         {
             shoot = newShootState;
         }
+
+		public void ScanInput(bool newScanState)
+		{
+			scan = newScanState;
+		}
 
         private void OnApplicationFocus(bool hasFocus)
 		{

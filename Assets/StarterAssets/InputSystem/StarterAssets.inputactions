@@ -68,6 +68,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Scan",
+                    "type": "Button",
+                    "id": "cfe2d770-c334-4fcb-95e6-dc1abfca655b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -277,6 +286,17 @@
                     "processors": "",
                     "groups": ";KeyboardMouse",
                     "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ab70710f-fbb5-41c3-aab1-53a35352e3f6",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";KeyboardMouse",
+                    "action": "Scan",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
