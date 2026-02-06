@@ -2,18 +2,19 @@ using HeneGames.DialogueSystem;
 using System;
 using UnityEngine;
 
-public class Love1QuestStep : QuestStep
+public class Love2QuestStep : QuestStep
 {
-    [SerializeField] PlayerInteract playerInteract;
-    private int menCollected = 0;
-    private const int menRequired = 1;
+    private int menCollected;
+    private const int menRequired = 5;
 
-    void Awake()
+    private void OnEnable()
     {
-        if (playerInteract != null) {
-            menCollected = playerInteract.GetMenCollected();
-        }
-        ManCollected();
+        BulletTargetHeart.OnManInLove += ManCollected; // += means subscribe
+    }
+
+    private void OnDisable()
+    {
+        BulletTargetHeart.OnManInLove -= ManCollected; // -= means unsubscribe
     }
     
     public static event Action onMenCollectedChanged;

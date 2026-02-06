@@ -1,32 +1,29 @@
 using UnityEngine;
 using StarterAssets;
+using System;
 public class PlayerInteract : MonoBehaviour
 {
-    private StarterAssetsInputs starterAssetsInputs;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
+    private int menCollected = 0;
+
+    private void OnEnable()
     {
-        starterAssetsInputs = GetComponent<StarterAssetsInputs>();
+        BulletTargetHeart.OnManInLove += ManCollected; // += means subscribe
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        //if (starterAssetsInputs.scan)
-        //{
-        //    Debug.Log("Scan key was detected!");
-        //    float interactRange = 2.0f;
-        //    Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
-        //    Debug.Log("Found " + colliderArray.Length + " colliders nearby.");
-        //    foreach (Collider collider in colliderArray)
-        //    {
-        //        if (collider.TryGetComponent<NPCInteractable>(out NPCInteractable npcInteractable))
-        //        {
-        //            npcInteractable.Interact();
-        //        }
-        //    }
-        //    starterAssetsInputs.scan = false;
-        //}
+        BulletTargetHeart.OnManInLove -= ManCollected; // -= means unsubscribe
+    }
+
+    public static event Action onMenCollectedChanged;
+    private void ManCollected()
+    {
+        menCollected++;
+    }
+
+    public int GetMenCollected()
+    {
+        return menCollected;
     }
 }
