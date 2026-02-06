@@ -5274,6 +5274,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4525299494038442, guid: ec15f5ae191975f4d8de236356aaec36, type: 3}
   m_PrefabInstance: {fileID: 178669633}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &185675973
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2120311612}
+    m_Modifications:
+    - target: {fileID: 946261050169740509, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: centrePoint
+      value: 
+      objectReference: {fileID: 549606842}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368703465043574707, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1437086557}
+    - target: {fileID: 7423976652655710791, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_Name
+      value: Akio Highschool Uniform (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+--- !u!4 &185675974 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+  m_PrefabInstance: {fileID: 185675973}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &186198863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25933,6 +25999,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4958332315337656, guid: 5a652a60006d6ec46980e623412396f9, type: 3}
   m_PrefabInstance: {fileID: 1127041293}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1131585710
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2120311612}
+    m_Modifications:
+    - target: {fileID: 946261050169740509, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: centrePoint
+      value: 
+      objectReference: {fileID: 549606842}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368703465043574707, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1437086557}
+    - target: {fileID: 7423976652655710791, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_Name
+      value: Akio Highschool Uniform (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+--- !u!4 &1131585711 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+  m_PrefabInstance: {fileID: 1131585710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1133955082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44137,6 +44269,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1771759506
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2120311612}
+    m_Modifications:
+    - target: {fileID: 946261050169740509, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: centrePoint
+      value: 
+      objectReference: {fileID: 549606842}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368703465043574707, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1437086557}
+    - target: {fileID: 7423976652655710791, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_Name
+      value: Akio Highschool Uniform (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+--- !u!4 &1771759507 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+  m_PrefabInstance: {fileID: 1771759506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1774280543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46083,6 +46281,72 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4168140838661730, guid: 62b11dd993aa50e42a0890a734908161, type: 3}
   m_PrefabInstance: {fileID: 1794950062}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1804563836
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2120311612}
+    m_Modifications:
+    - target: {fileID: 946261050169740509, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: centrePoint
+      value: 
+      objectReference: {fileID: 549606842}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368703465043574707, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1437086557}
+    - target: {fileID: 7423976652655710791, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_Name
+      value: Akio Highschool Uniform (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+--- !u!4 &1804563837 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+  m_PrefabInstance: {fileID: 1804563836}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1807519514
 PrefabInstance:
@@ -54153,16 +54417,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e66fb3be89e7f0947b5bece0afba11b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::elizabethWarrenDM
+  animator: {fileID: 0}
   dialogueData2: {fileID: 11400000, guid: d3abbd4642cdd1049b3ffe5afa70ccfd, type: 2}
   dialogueData3: {fileID: 11400000, guid: cb644988b27015c45b314f8bc594131b, type: 2}
-  dialogueData4: {fileID: 0}
-  dialogueData5: {fileID: 0}
-  dialogueData6: {fileID: 0}
+  dialogueData4: {fileID: 11400000, guid: f1150dd1786c20b48a9f5c30845f987c, type: 2}
+  dialogueData5: {fileID: 11400000, guid: 2ca333f8c2ec67e49ab40d6a113b02bf, type: 2}
+  dialogueData6: {fileID: 11400000, guid: 060ad3003f4bc6142931d6b6896cc2f7, type: 2}
   questInfo1: {fileID: 11400000, guid: d6b795d157333c3418b0db11e333a317, type: 2}
   questInfo2: {fileID: 11400000, guid: afd1333ee30f8f94c84158651bdd8a54, type: 2}
   questInfo3: {fileID: 11400000, guid: 7eb381beac1f43348a6fe24fc8f91159, type: 2}
-  questInfoMom: {fileID: 11400000, guid: 25687c8219201a5448edfd6b897e0246, type: 2}
-  questInfoMen: {fileID: 11400000, guid: 65d9f4550ae7c4c4690ea7265862b03d, type: 2}
+  questInfoMen: {fileID: 11400000, guid: 25687c8219201a5448edfd6b897e0246, type: 2}
+  questInfoMom: {fileID: 11400000, guid: 65d9f4550ae7c4c4690ea7265862b03d, type: 2}
 --- !u!1001 &2007078284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56042,6 +56307,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4592770765900944, guid: 935ba91ea5459eb4d8917d5e94bc3ddf, type: 3}
   m_PrefabInstance: {fileID: 2084929329}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2086455035
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2120311612}
+    m_Modifications:
+    - target: {fileID: 946261050169740509, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: centrePoint
+      value: 
+      objectReference: {fileID: 549606842}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368703465043574707, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1437086557}
+    - target: {fileID: 7423976652655710791, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+      propertyPath: m_Name
+      value: Akio Highschool Uniform (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+--- !u!4 &2086455036 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2174224052277307584, guid: 71d20c8f72d6995479e940b623e544e4, type: 3}
+  m_PrefabInstance: {fileID: 2086455035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2089103350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56512,6 +56843,11 @@ Transform:
   - {fileID: 151753173}
   - {fileID: 194770514}
   - {fileID: 836193108}
+  - {fileID: 1804563837}
+  - {fileID: 1771759507}
+  - {fileID: 1131585711}
+  - {fileID: 2086455036}
+  - {fileID: 185675974}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2123891109 stripped

@@ -4,31 +4,22 @@ using UnityEngine;
 
 public class MomQuestStep : QuestStep
 {
-    private int menCollected = 0;
-    private const int menRequired = 1;
-
     private void OnEnable()
     {
-        BulletTargetHeart.OnManInLove += ManCollected;
+        Health.onAkioDied += MenCollected;
     }
 
     private void OnDisable()
     {
-        BulletTargetHeart.OnManInLove -= ManCollected;
+        Health.onAkioDied -= MenCollected;
     }
 
     public static event Action onMenCollectedChanged;
-    private void ManCollected()
-    {         
-        if (menCollected < menRequired)
-        {
-            menCollected++;
-        }
-        if (menCollected >= menRequired)
-        {
-            onMenCollectedChanged?.Invoke();
-            FinishQuestStep();
-        }
+    private void MenCollected()
+    {
+        onMenCollectedChanged?.Invoke();
+        FinishQuestStep();
     }
+
 
 }

@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ElizabethWarrenDM : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
+
     private DialogueManager dialogueManager;
     [Header("Dialogues")]
     [SerializeField] private DialogueData dialogueData2;
@@ -15,8 +17,8 @@ public class ElizabethWarrenDM : MonoBehaviour
     [SerializeField] private QuestInfoSO questInfo1;
     [SerializeField] private QuestInfoSO questInfo2;
     [SerializeField] private QuestInfoSO questInfo3;
-    [SerializeField] private QuestInfoSO questInfoMom;
     [SerializeField] private QuestInfoSO questInfoMen;
+    [SerializeField] private QuestInfoSO questInfoMom;
 
     private string questId;
 
@@ -51,7 +53,7 @@ public class ElizabethWarrenDM : MonoBehaviour
     }
     private void SwitchToDialogue5()
     {
-        dialogueManager.currentDialogueData = dialogueData5;
+        animator.SetBool("IsDead", true);
     }
     private void SwitchToDialogue6()
     {

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -29,10 +30,12 @@ public class Health : MonoBehaviour
         }
      }
 
+    public static event Action onAkioDied;
     void Die()
     {
         akio.agent.isStopped = true;
         animator.SetBool("IsDead", true);
         akio.UpdateState(AkioState.Dead);
+        onAkioDied?.Invoke();
     }
 }

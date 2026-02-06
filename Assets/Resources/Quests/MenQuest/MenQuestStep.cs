@@ -5,7 +5,7 @@ using UnityEngine;
 public class MenQuestStep : QuestStep
 {
     private int menCollected = 0;
-    private const int menRequired = 5;
+    private const int menRequired = 1;
 
     private void OnEnable()
     {
@@ -17,24 +17,18 @@ public class MenQuestStep : QuestStep
         BulletTargetHeart.OnManInLove -= ManCollected;
     }
 
+    public static event Action onMenCollectedChanged;
     private void ManCollected()
-    {         
+    {
         if (menCollected < menRequired)
         {
             menCollected++;
         }
         if (menCollected >= menRequired)
         {
-            MenCollected();
+            onMenCollectedChanged?.Invoke();
+            FinishQuestStep();
         }
-    }
-
-    public static event Action onMenCollectedChanged;
-    private void MenCollected()
-    {
-        onMenCollectedChanged?.Invoke();
-        FinishQuestStep();
-        Debug.Log("quest3 step complete");
     }
 
 }
