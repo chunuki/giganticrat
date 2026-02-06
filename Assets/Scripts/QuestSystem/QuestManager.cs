@@ -86,7 +86,7 @@ public class QuestManager : MonoBehaviour
 
     private void StartQuest(string id)
     {
-        Debug.Log("quest started");
+        Debug.Log("StartQuest call");
         Quest quest = GetQuestById(id);
         if (quest.state == QuestState.CAN_START)
         {
@@ -98,7 +98,7 @@ public class QuestManager : MonoBehaviour
 
     private void AdvanceQuest(string id)
     {
-        Debug.Log("quest advanced");
+        Debug.Log("AdvanceQuest call");
         Quest quest = GetQuestById(id);
         quest.MoveToNextStep();
         if (quest.CurrentStepExists())
@@ -114,6 +114,7 @@ public class QuestManager : MonoBehaviour
 
     private void FinishQuest(string id)
     {
+        Debug.Log("FinishQuest call");
         Quest quest = GetQuestById(id);
         ClaimRewards(quest);
         ChangeQuestState(quest.info.id, QuestState.COMPLETED);

@@ -17,19 +17,21 @@ public class QuestTriggerBridge : MonoBehaviour
         switch (currentState)
         {
             case QuestState.CAN_START:
+                Debug.Log("1 // havent start yet " + questId);
                 GameEventsManager.instance.questEvents.StartQuest(questId);
                 break;
 
             case QuestState.IN_PROGRESS:
-                Debug.Log("NPC: You're still working on it!");
+                Debug.Log("2 // started in progress " + questId);
                 break;
 
             case QuestState.CAN_COMPLETE:
+                Debug.Log("3 // all good can complete " + questId);
                 GameEventsManager.instance.questEvents.FinishQuest(questId);
                 break;
 
             case QuestState.COMPLETED:
-                Debug.Log("NPC: Thanks for the help!");
+                Debug.Log("4 // completed " + questId);
                 break;
         }
     }

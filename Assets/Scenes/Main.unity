@@ -3317,7 +3317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4240109998300524, guid: 405988af1bd38ee4fb92e86058b6c926, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5494585
+      value: -2.55
       objectReference: {fileID: 0}
     - target: {fileID: 4240109998300524, guid: 405988af1bd38ee4fb92e86058b6c926, type: 3}
       propertyPath: m_LocalPosition.z
@@ -35283,6 +35283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fcccea090c279f4584ee1e7b3297c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteract
+  menCollected: 0
 --- !u!114 &1437086585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36259,7 +36260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4240109998300524, guid: 405988af1bd38ee4fb92e86058b6c926, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5494585
+      value: -2.55
       objectReference: {fileID: 0}
     - target: {fileID: 4240109998300524, guid: 405988af1bd38ee4fb92e86058b6c926, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54154,9 +54155,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::elizabethWarrenDM
   dialogueData2: {fileID: 11400000, guid: d3abbd4642cdd1049b3ffe5afa70ccfd, type: 2}
   dialogueData3: {fileID: 11400000, guid: cb644988b27015c45b314f8bc594131b, type: 2}
+  dialogueData4: {fileID: 0}
+  dialogueData5: {fileID: 0}
+  dialogueData6: {fileID: 0}
   questInfo1: {fileID: 11400000, guid: d6b795d157333c3418b0db11e333a317, type: 2}
   questInfo2: {fileID: 11400000, guid: afd1333ee30f8f94c84158651bdd8a54, type: 2}
-  image: {fileID: 11400000, guid: 3914ababc25e8124b895ea9a87a2a7fc, type: 2}
+  questInfo3: {fileID: 11400000, guid: 7eb381beac1f43348a6fe24fc8f91159, type: 2}
+  questInfoMom: {fileID: 11400000, guid: 25687c8219201a5448edfd6b897e0246, type: 2}
+  questInfoMen: {fileID: 11400000, guid: 65d9f4550ae7c4c4690ea7265862b03d, type: 2}
 --- !u!1001 &2007078284
 PrefabInstance:
   m_ObjectHideFlags: 0

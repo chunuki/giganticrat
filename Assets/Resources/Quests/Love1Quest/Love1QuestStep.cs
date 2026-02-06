@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Love1QuestStep : QuestStep
 {
-    [SerializeField] PlayerInteract playerInteract;
     private int menCollected = 0;
     private const int menRequired = 1;
 

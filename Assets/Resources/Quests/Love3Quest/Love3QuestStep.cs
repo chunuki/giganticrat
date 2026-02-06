@@ -2,10 +2,10 @@ using HeneGames.DialogueSystem;
 using System;
 using UnityEngine;
 
-public class Love2QuestStep : QuestStep
+public class Love3QuestStep : QuestStep
 {
     private int menCollected = 0;
-    private const int menRequired = 3;
+    private const int menRequired = 5;
 
     private void OnEnable()
     {
@@ -34,7 +34,7 @@ public class Love2QuestStep : QuestStep
     {
         onMenCollectedChanged?.Invoke();
         FinishQuestStep();
-        Debug.Log("quest2 step complete");
+        Debug.Log("quest3 step complete");
     }
 
 }

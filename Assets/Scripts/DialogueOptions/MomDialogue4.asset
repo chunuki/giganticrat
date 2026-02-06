@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8e82cee5ffe5b141a46c2a57f8740ff, type: 3}
-  m_Name: MomDialogue3
+  m_Name: MomDialogue4
   m_EditorClassIdentifier: Assembly-CSharp::HeneGames.DialogueSystem.DialogueData
   sentences:
   - dialogueCharacter: {fileID: 0}
-    sentence: 'Sobs...you''re the best daughter I''ve ever had. '
+    sentence: My...my goodness!
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8691892363174280763, guid: 66b397720b9b4d3498acc4b794a74ac4, type: 3}
+        - m_Target: {fileID: 8691892363174280763, guid: a12306f9125ad354084a96afd45dcdba, type: 3}
           m_TargetAssemblyTypeName: QuestTriggerBridge, Assembly-CSharp
           m_MethodName: Interact
           m_Mode: 1
@@ -33,20 +33,55 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - dialogueCharacter: {fileID: 0}
-    sentence: You're my only daughter, actually.
+    sentence: N-nine...
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls: []
   - dialogueCharacter: {fileID: 0}
-    sentence: How I wish I could relive the days of having men surround me...
+    sentence: Nine hot, sexy men...
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 0}
+    sentence: I've got to say, darling, even I have never attracted the gazes of
+      so many men before...
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 0}
+    sentence: You've gone too far, my dear. I can't let you step over me like that.
+    skipDelayTime: 0
+    sentenceSound: {fileID: 0}
+    sentenceEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - dialogueCharacter: {fileID: 0}
+    sentence: I want you to kill the last remaining boy in this school. Do your mother
+      proud.
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8691892363174280763, guid: a12306f9125ad354084a96afd45dcdba, type: 3}
+        - m_Target: {fileID: 8691892363174280763, guid: c7d98f035a3490747ad3809855a7c243, type: 3}
+          m_TargetAssemblyTypeName: QuestTriggerBridge, Assembly-CSharp
+          m_MethodName: Interact
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 8691892363174280763, guid: dc1478dce0fd2a9409f83a48404ba9b7, type: 3}
           m_TargetAssemblyTypeName: QuestTriggerBridge, Assembly-CSharp
           m_MethodName: Interact
           m_Mode: 1
