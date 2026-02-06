@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1190680128437629691}
   - component: {fileID: 1190680128437629692}
   - component: {fileID: -3416835218989744218}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arrow_01_EmissionRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,8 +43,8 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190680128437629694}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Enabled: 0
+  m_Avatar: {fileID: 9000000, guid: c0205b681ae48a94c8fab219ba979b76, type: 3}
   m_Controller: {fileID: 9100000, guid: 5d3f14468f705d7468188caf2e7202b4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
