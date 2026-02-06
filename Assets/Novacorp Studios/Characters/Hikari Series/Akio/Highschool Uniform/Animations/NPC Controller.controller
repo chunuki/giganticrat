@@ -417,5 +417,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713f0a0f3b9306549ba8e6c9fa101403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  _timeUntilBored: 5
+  _timeUntilBored: 15
   _numberOfBoredAnimations: 2
