@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HeneGames.DialogueSystem.DialogueData
   sentences:
   - dialogueCharacter: {fileID: 0}
-    sentence: You...you chose men over ME?! *dies*
+    sentence: Look...what...you've....done...
     skipDelayTime: 0
     sentenceSound: {fileID: 0}
     sentenceEvent:

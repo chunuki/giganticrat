@@ -53,6 +53,7 @@ public class ElizabethWarrenDM : MonoBehaviour
     }
     private void SwitchToDialogue5()
     {
+        dialogueManager.currentDialogueData = dialogueData5;
         animator.SetBool("IsDead", true);
     }
     private void SwitchToDialogue6()
