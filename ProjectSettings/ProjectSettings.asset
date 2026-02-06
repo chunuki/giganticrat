@@ -930,11 +930,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: c77a08ce-9a98-4397-8fde-1b6172b4439f
+  cloudProjectId: 528a94ab-b54a-425c-a667-cb1ebbcc55c4
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: My project (2)
-  organizationId: kangaroopouch2025
+  organizationId: dcyx
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
