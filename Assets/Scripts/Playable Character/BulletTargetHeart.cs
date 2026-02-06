@@ -19,12 +19,11 @@ public class BulletTargetHeart : MonoBehaviour
 
     private IEnumerator ShotAnimation()
     {
-        akio.isFrozen = true;
+        akio.agent.isStopped = true;
         akio.animator.SetTrigger("IsInLove");
-        akio.UpdateState(AkioState.InLove);
         yield return null;
         yield return new WaitForSeconds(2.0f);
-        akio.isFrozen = false;
+        akio.UpdateState(AkioState.InLove);
 
     }
 }

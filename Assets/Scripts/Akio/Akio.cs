@@ -38,7 +38,6 @@ public class Akio : MonoBehaviour
     [Header("Angry Settings")]
     public float visionRange = 10f;
 
-    public bool isFrozen;
     private bool isDeathVisible;
     private bool isPlayerVisible;
     public bool isWaiting = false;
@@ -68,10 +67,6 @@ public class Akio : MonoBehaviour
                 }
                 break;
             case AkioState.InLove:
-                while (isFrozen)
-                {
-                    agent.isStopped = true;
-                }
                 boid.Follow();
                 break;
             case AkioState.Dead:
