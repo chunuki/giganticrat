@@ -211,7 +211,7 @@ MonoBehaviour:
   vfxHitGreen: {fileID: 8776583896675247144, guid: e265cb67d36d9ac4e95e48e289d615e8, type: 3}
   vfxHitRed: {fileID: 8153028468530496940, guid: f40db358de8027b40a465c9b3026ce5d, type: 3}
   vfxHitPink: {fileID: 4124257825387716, guid: f87e7926fd589094b8a269e14b8bea5e, type: 3}
-  speed: 30
+  speed: 20
   damage: 20
   bulletTarget: {fileID: 0}
   bulletTargetHeart: {fileID: 0}
@@ -223,10 +223,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9104274583382145394}
     m_Modifications:
-    - target: {fileID: -3416835218989744218, guid: 6ada1d9279e3a964ea195a81d0989463, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1190680128437629690, guid: 6ada1d9279e3a964ea195a81d0989463, type: 3}
       propertyPath: m_Avatar
       value: 
