@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6df34fdefe351c4a8be212a4868e8d5, type: 3}
+  m_Name: Love2Quest
+  m_EditorClassIdentifier: Assembly-CSharp::QuestInfoSO
+  <id>k__BackingField: Love2Quest
+  displayName: Conquer 3 more men!
+  questPrequisites: []
+  questStepPrefabs:
+  - {fileID: 1362379364856120340, guid: 66b397720b9b4d3498acc4b794a74ac4, type: 3}
+  scoreReward: 500

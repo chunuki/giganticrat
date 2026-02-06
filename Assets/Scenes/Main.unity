@@ -53872,7 +53872,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::elizabethWarrenDM
   dialogueData2: {fileID: 11400000, guid: d3abbd4642cdd1049b3ffe5afa70ccfd, type: 2}
-  questInfo: {fileID: 11400000, guid: d6b795d157333c3418b0db11e333a317, type: 2}
+  dialogueData3: {fileID: 11400000, guid: cb644988b27015c45b314f8bc594131b, type: 2}
+  questInfo1: {fileID: 11400000, guid: d6b795d157333c3418b0db11e333a317, type: 2}
+  questInfo2: {fileID: 11400000, guid: afd1333ee30f8f94c84158651bdd8a54, type: 2}
 --- !u!1001 &2007078284
 PrefabInstance:
   m_ObjectHideFlags: 0
