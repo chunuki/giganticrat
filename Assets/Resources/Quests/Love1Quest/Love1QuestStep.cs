@@ -8,14 +8,16 @@ public class Love1QuestStep : QuestStep
     private int menCollected = 0;
     private const int menRequired = 1;
 
-    void Awake()
+    private void OnEnable()
     {
-        if (playerInteract != null) {
-            menCollected = playerInteract.GetMenCollected();
-        }
-        ManCollected();
+        BulletTargetHeart.OnManInLove += ManCollected;
     }
-    
+
+    private void OnDisable()
+    {
+        BulletTargetHeart.OnManInLove -= ManCollected;
+    }
+
     public static event Action onMenCollectedChanged;
     private void ManCollected()
     {         
