@@ -35,6 +35,7 @@ public class Love2QuestStep : QuestStep
     {
         onMenCollectedChanged?.Invoke();
         FinishQuestStep();
+        Debug.Log("quest2 step complete");
     }
 
 }

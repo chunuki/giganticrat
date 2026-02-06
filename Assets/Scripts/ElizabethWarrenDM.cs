@@ -9,7 +9,7 @@ public class ElizabethWarrenDM : MonoBehaviour
     [Header("Config")]
     [SerializeField] private QuestInfoSO questInfo1;
     [SerializeField] private QuestInfoSO questInfo2;
-
+    [SerializeField] DialogueCharacter image;
     private string questId;
 
     private void Awake()

@@ -6,7 +6,7 @@ public class Timer : MonoBehaviour
 {
     float currentTime = 0f;
     [SerializeField]
-    private float startingTime = 500f;
+    private float startingTime = 10f;
     public TMP_Text timeText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,6 +25,7 @@ public class Timer : MonoBehaviour
         if (currentTime <= 0)
         {
             currentTime = 0;
+            Debug.Log("Loading scene");
             SceneManager.LoadScene("Ending");
         }
     }

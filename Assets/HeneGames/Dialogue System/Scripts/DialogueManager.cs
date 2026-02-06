@@ -31,6 +31,10 @@ namespace HeneGames.DialogueSystem
         [SerializeField] private TriggerState triggerState;
         public DialogueData currentDialogueData;
 
+        [Header("Character Override")]
+        [SerializeField] private string characterName;
+        [SerializeField] private Sprite characterPhoto;
+
         private void Update()
         {
             //Timer
@@ -240,23 +244,20 @@ namespace HeneGames.DialogueSystem
 
         private void ShowCurrentSentence()
         {
-            if (currentDialogueData.sentences[currentSentence].dialogueCharacter != null)
-            {
-                DialogueUI.instance.ShowSentence(currentDialogueData.sentences[currentSentence].dialogueCharacter, currentDialogueData.sentences[currentSentence].sentence);
+            var sentenceData = currentDialogueData.sentences[currentSentence];
 
-                currentDialogueData.sentences[currentSentence].sentenceEvent.Invoke();
-            }
-            else
-            {
-                DialogueCharacter _dialogueCharacter = ScriptableObject.CreateInstance<DialogueCharacter>();
-                _dialogueCharacter.characterName = "";
-                _dialogueCharacter.characterPhoto = null;
+            DialogueCharacter runtimeCharacter = ScriptableObject.CreateInstance<DialogueCharacter>();
+            runtimeCharacter.characterName = characterName;
+            runtimeCharacter.characterPhoto = characterPhoto;
 
-                DialogueUI.instance.ShowSentence(_dialogueCharacter, currentDialogueData.sentences[currentSentence].sentence);
+            DialogueUI.instance.ShowSentence(
+                runtimeCharacter,
+                sentenceData.sentence
+            );
 
-                currentDialogueData.sentences[currentSentence].sentenceEvent.Invoke();
-            }
+            sentenceData.sentenceEvent.Invoke();
         }
+
 
         public int CurrentSentenceLenght()
         {
