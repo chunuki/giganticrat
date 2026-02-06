@@ -8,5 +8,7 @@ namespace HeneGames.DialogueSystem
     {
         [Header("Dialogue Content")]
         public List<NPC_Centence> sentences = new List<NPC_Centence>();
+        [Header("Dialogue Character")]
+        public DialogueCharacter image;
     }
 }
